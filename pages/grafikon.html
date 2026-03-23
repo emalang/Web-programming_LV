@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CSS chart showing movie genres from the movie table.">
+    <link rel="stylesheet" href="../styles/style_grafikon.css">
+    <title>Movie Genre Chart</title>
+</head>
+<body>
+
+    <header>
+        <h1>Movie Genre Chart</h1>
+        <p>Chart based on the movie table from the home page.</p>
+    </header>
+
+    <div class="nav-wrapper">
+        <button class="menu-toggle" aria-label="Open navigation">Menu</button>
+
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="grafikon.html">Chart</a></li>
+                <li><a href="slike.html">Gallery</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <main class="content">
+        <section aria-labelledby="chart-title">
+            <h2 id="chart-title">Movie Genres</h2>
+            <p>The chart shows the number of movies in each genre group.</p>
+
+            <div class="chart">
+                <div class="bar-group" data-info="5 comedy movies">
+                    <div class="bar comedy" aria-label="Comedy: 5 movies"></div>
+                    <p>Comedy (5)</p>
+                </div>
+
+                <div class="bar-group" data-info="5 drama movies">
+                    <div class="bar drama" aria-label="Drama: 5 movies"></div>
+                    <p>Drama (5)</p>
+                </div>
+
+                <div class="bar-group" data-info="2 action movies">
+                    <div class="bar action" aria-label="Action: 2 movies"></div>
+                    <p>Action (2)</p>
+                </div>
+
+                <div class="bar-group" data-info="7 other genre movies">
+                    <div class="bar other" aria-label="Other: 7 movies"></div>
+                    <p>Other (7)</p>
+                </div>
+            </div>
+        </section>
+
+        <article aria-labelledby="chart-explanation">
+            <h2 id="chart-explanation">Explanation</h2>
+            <p>Comedy and drama are the most common categories in the table, while action appears less often. All remaining genres are grouped into the category "Other".</p>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Web Programming. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,206 @@
+:root {
+    --bg-color: #f4f4f4;
+    --text-color: #222;
+    --header-bg: #222;
+    --nav-bg: #333;
+    --button-bg: #555;
+    --link-bg: #444;
+    --content-bg: white;
+
+    --comedy-color: linear-gradient(to top, #3d8b40, #4caf50);
+    --drama-color: linear-gradient(to top, #1976d2, #2196f3);
+    --action-color: linear-gradient(to top, #ef6c00, #ff9800);
+    --other-color: linear-gradient(to top, #7b1fa2, #9c27b0);
+
+    --chart-height: 350px;
+    --bar-width: 80px;
+    --radius: 10px;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: var(--bg-color);
+    text-align: center;
+    color: var(--text-color);
+}
+
+/* Header */
+header {
+    background: var(--header-bg);
+    color: white;
+    padding: 20px;
+}
+
+/* Footer */
+footer {
+    margin-top: 30px;
+    padding: 15px;
+    background: var(--header-bg);
+    color: white;
+}
+
+/* Content box */
+.content {
+    max-width: 1000px;
+    margin: 20px auto;
+    background: var(--content-bg);
+    padding: 30px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+/* Navigation */
+.nav-wrapper {
+    position: relative;
+    background: var(--nav-bg);
+    padding: 10px;
+}
+
+.menu-toggle {
+    background-color: var(--button-bg);
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+nav {
+    display: none;
+}
+
+.nav-wrapper:hover nav {
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+}
+
+nav ul li {
+    margin: 8px 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    background: var(--link-bg);
+    padding: 8px 12px;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+/* Chart */
+.chart {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    gap: 20px;
+    height: var(--chart-height);
+    margin-top: 40px;
+    padding: 20px;
+    border-left: 3px solid #333;
+    border-bottom: 3px solid #333;
+}
+
+.bar-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    width: 120px;
+    height: 100%;
+    position: relative;
+}
+
+.bar {
+    width: var(--bar-width);
+    border-radius: 8px 8px 0 0;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, filter 0.3s ease;
+    animation: growBar 1.2s ease-out;
+}
+
+/* Hover effect */
+.bar:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+/* Additional info on hover */
+.bar-group:hover::after {
+    content: attr(data-info);
+    margin-top: 8px;
+    display: block;
+    background: #222;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+/* Bar styles */
+.comedy {
+    height: 200px;
+    background: var(--comedy-color);
+}
+
+.drama {
+    height: 200px;
+    background: var(--drama-color);
+}
+
+.action {
+    height: 80px;
+    background: var(--action-color);
+}
+
+.other {
+    height: 280px;
+    background: var(--other-color);
+}
+
+.bar-group p {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+article {
+    margin-top: 30px;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+/* Animation */
+@keyframes growBar {
+    from {
+        height: 0;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .chart {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        border-left: none;
+        border-bottom: none;
+    }
+
+    .bar-group {
+        width: 100%;
+        height: auto;
+    }
+
+    .bar {
+        width: 200px;
+    }
+}

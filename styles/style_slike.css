@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css?family=Abel');
+
+body {
+  font-family: 'Abel', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4; /* CHANGE 1: added page background */
+  color: #222;
+}
+
+header {
+  background: #222;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+footer {
+  margin-top: 30px;
+  padding: 15px;
+  background: #222;
+  color: white;
+  text-align: center;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+.nav-wrapper {
+  position: relative;
+  background: #333;
+  padding: 10px;
+}
+
+.menu-toggle {
+  background-color: #555;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+nav {
+  display: none;
+}
+
+.nav-wrapper:hover nav {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0 0;
+  text-align: center;
+}
+
+nav ul li {
+  margin: 8px 0;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  background: #444;
+  padding: 8px 12px;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+.galerija h1,
+.galerija h2 {
+  color: darkblue;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.img-gallery-magnific {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* CHANGE 2: increased gap between images */
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.magnific-img {
+  width: 30%;
+  min-width: 250px;
+  position: relative;
+  overflow: hidden;
+  background: white;
+  border-radius: 12px; /* CHANGE 3: larger rounded corners */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.12); /* CHANGE 4: added stronger shadow */
+  padding-bottom: 10px;
+}
+
+a.image-popup-vertical-fit {
+  cursor: zoom-in;
+  display: block;
+}
+
+.magnific-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px 12px 0 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  display: block;
+}
+
+.magnific-img img:hover {
+  transform: scale(1.05);
+  opacity: 0.95;
+}
+
+figcaption {
+  text-align: center;
+  padding-top: 8px;
+  font-size: 1rem;
+}
+
+/* CSS-only lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 999;
+  text-align: center;
+}
+
+.lightbox:target {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.lightbox img {
+  max-width: 85%;
+  max-height: 80vh;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(255,255,255,0.2);
+}
+
+.close {
+  color: white;
+  text-decoration: none;
+  font-size: 40px;
+  margin-bottom: 20px;
+  background: #222;
+  padding: 5px 15px;
+  border-radius: 8px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .magnific-img {
+    width: 45%;
+  }
+}
+
+@media (max-width: 600px) {
+  .magnific-img {
+    width: 100%;
+    min-width: unset;
+  }
+
+  .lightbox img {
+    max-width: 95%;
+  }
+}

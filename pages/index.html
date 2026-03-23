@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Meta description is used for SEO and describes the page in search results -->
+    <meta name="description" content="A web page about movies with a data table, image gallery, and CSS-based charts.">
+
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="../styles/style.css">
+
+    <title>Movie List</title>
+</head>
+<body>
+
+    <header>
+        <h1>Movie List</h1>
+        <p>Overview of selected movies with key information and additional content.</p>
+    </header>
+
+    <div class="nav-wrapper">
+        <button class="menu-toggle" aria-label="Open navigation">Menu</button>
+
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="grafikon.html">Chart</a></li>
+                <li><a href="slike.html">Gallery</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <main>
+        <div class="content-layout">
+
+            <section aria-labelledby="movie-table">
+                <h2 id="movie-table">Movie Table</h2>
+                <p>The table below shows movies by title, year, genre, duration, country, and rating.</p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Title</th>
+                            <th>Year</th>
+                            <th>Genre</th>
+                            <th>Duration</th>
+                            <th>Country</th>
+                            <th>Rating</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>2</td><td>Bugs Bunny's Third Movie</td><td>1982</td><td>Animation</td><td>76</td><td>USA</td><td>7.7</td></tr>
+                        <tr><td>3</td><td>18 anni tra una settimana</td><td>1991</td><td>Drama</td><td>98</td><td>Italy</td><td>6.5</td></tr>
+                        <tr><td>17</td><td>Ride a Wild Pony</td><td>1976</td><td>Romance</td><td>91</td><td>USA</td><td>5.7</td></tr>
+                        <tr><td>18</td><td>Diner</td><td>1982</td><td>Comedy</td><td>95</td><td>USA</td><td>7.0</td></tr>
+                        <tr><td>20</td><td>A che servono questi quattrini?</td><td>1942</td><td>Comedy</td><td>85</td><td>Italy</td><td>5.9</td></tr>
+                        <tr><td>22</td><td>A ciascuno il suo</td><td>1967</td><td>Drama</td><td>93</td><td>Italy</td><td>7.6</td></tr>
+                        <tr><td>23</td><td>Dead-Bang</td><td>1989</td><td>Crime</td><td>109</td><td>USA</td><td>6.0</td></tr>
+                        <tr><td>24</td><td>A... come assassino</td><td>1966</td><td>Thriller</td><td>80</td><td>Italy</td><td>5.2</td></tr>
+                        <tr><td>26</td><td>At Close Range</td><td>1986</td><td>Drama</td><td>115</td><td>USA</td><td>7.5</td></tr>
+                        <tr><td>30</td><td>A Ghentar si muore facile</td><td>1968</td><td>Adventure</td><td>101</td><td>Italy</td><td>4.8</td></tr>
+                        <tr><td>32</td><td>Sleeping with the Enemy</td><td>1990</td><td>Drama</td><td>96</td><td>USA</td><td>5.0</td></tr>
+                        <tr><td>34</td><td>In Bed With Madonna</td><td>1990</td><td>Documentary</td><td>111</td><td>USA</td><td>5.3</td></tr>
+                        <tr><td>36</td><td>Bowery at Midnight</td><td>1942</td><td>Horror</td><td>62</td><td>USA</td><td>5.1</td></tr>
+                        <tr><td>37</td><td>A mezzanotte va la ronda del piacere</td><td>1975</td><td>Comedy</td><td>100</td><td>Italy</td><td>5.8</td></tr>
+                        <tr><td>38</td><td>Mr. Majestyk</td><td>1974</td><td>Action</td><td>105</td><td>USA</td><td>6.2</td></tr>
+                        <tr><td>45</td><td>Warning Sign</td><td>1985</td><td>Action</td><td>99</td><td>USA</td><td>4.8</td></tr>
+                        <tr><td>47</td><td>About Last Night</td><td>1986</td><td>Comedy</td><td>113</td><td>USA</td><td>5.9</td></tr>
+                        <tr><td>49</td><td>Fail-Safe</td><td>1964</td><td>Drama</td><td>110</td><td>USA</td><td>8.2</td></tr>
+                        <tr><td>51</td><td>Some Like It Hot</td><td>1959</td><td>Comedy</td><td>120</td><td>USA</td><td>9.1</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <aside aria-labelledby="featured">
+                <h2 id="featured">Featured</h2>
+                <p>Below are two movie posters as additional visual content.</p>
+
+                <img src="https://cdng.europosters.eu/pod_public/1300/144103.jpg" alt="Poster of Some Like It Hot">
+                <img src="https://i.ebayimg.com/images/g/2LYAAOSwS6Nma593/s-l1200.jpg" alt="Poster of Sleeping with the Enemy">
+            </aside>
+        </div>
+
+        <section aria-labelledby="about">
+            <h2 id="about">About</h2>
+            <p>This page presents structured movie data using semantic HTML5 elements. The layout is designed to be clear, accessible, and responsive.</p>
+        </section>
+
+        <article aria-labelledby="fact">
+            <h2 id="fact">Interesting Fact</h2>
+            <p><em>Some Like It Hot</em> has the highest rating in the table, while drama and comedy are the most common genres. These will be used for the chart page.</p>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Web Programming. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
